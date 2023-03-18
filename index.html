@@ -4,7 +4,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Montserrat:wght@100;400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Montserrat:wght@100;400&family=Roboto:wght@100;400&display=swap"
       rel="stylesheet"
     />
     <link
@@ -18,51 +18,76 @@
     <title>Portfolio</title>
   </head>
   <body>
-    <div>
-      <div class="header">
-        <p id="logo-title">Lucas Peixoto</p>
-        <span
-          class="material-symbols-outlined"
-          id="hamburger-menu"
-          onclick="clickMenu()"
-        >
-          menu
-        </span>
-        <menu id="itens">
-          <ul>
+    <div class="header">
+      <p id="logo-title">Lucas Peixoto</p>
+      <span
+        class="material-symbols-outlined"
+        id="hamburger-menu"
+        onclick="clickMenu()"
+      >
+        menu
+      </span>
+      <menu id="itens">
+        <ul>
+          <li>
+            <a href="#">Início</a>
+          </li>
+          <li>
+            <a href="#">Contato</a>
+          </li>
+          <li>
+            <a href="#">Sobre</a>
+          </li>
+          <li>
+            <a href="#">Projetos</a>
+          </li>
+          <li>
+            <a href="#">Algo</a>
+          </li>
+          <li id="ul_contact">
+            <a href="#">Contate-me</a>
+          </li>
+        </ul>
+      </menu>
+      <p id="contact">Contate-me</p>
+    </div>
+
+    <hr />
+
+    <div class="content">
+      <div class="resume-container">
+        <div class="resume">
+          <h4>Hi, I'm Lucas!</h4>
+          <p id="office">Desenvolvedor Back-End</p>
+          <p>
+            Sou desenvolvedor júnior e trabalho com as seguintes tecnologias:
+          </p>
+          <ul id="tecnologies">
             <li>
-              <a href="#">Início</a>
+              <p>Python</p>
             </li>
             <li>
-              <a href="#">Contato</a>
+              <p>HTML</p>
             </li>
             <li>
-              <a href="#">Sobre</a>
+              <p>CSS</p>
             </li>
             <li>
-              <a href="#">Projetos</a>
+              <p>JavaScript</p>
             </li>
             <li>
-              <a href="#">Algo</a>
-            </li>
-            <li id="ul_contact">
-              <a href="#">Contate-me</a>
+              <p>ReactJS</p>
             </li>
           </ul>
-        </menu>
-        <p id="contact">Contate-me</p>
-      </div>
-
-      <div class="content">
-        <div class="resume">
-          <h4>Olá, meu nome é Lucas!</h4>
-          <p>Sou desenvolvedor júnior</p>
         </div>
+
         <div class="avatar">
-          <img src="./assets/profile.png" height="300" width="300" alt="" />
+          <img src="./assets/avatar.png" height="400" width="400" alt="" />
         </div>
       </div>
     </div>
+
+    <footer></footer>
 
     <script>
       function clickMenu() {
