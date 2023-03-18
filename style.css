@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Faz com que os paddings, margin sejam aplicados na caixa do elemento */
+}
+
+:root {
+  --tw-gradient-from: #06b6d4;
+  --tw-gradient-to: rgb(6 182 212 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: #3b82f6;
+}
+
+body {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding: 15px 40px;
+
+  background: white;
+}
+
+.header ul {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+
+  justify-content: center;
+
+  list-style: none;
+}
+
+.header ul li a {
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+
+  transition: all 0.3s linear;
+}
+
+.header ul li a:hover {
+  padding: 10px;
+  border-radius: 20px;
+
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+  color: aliceblue;
+
+  transition: all 0.3s linear;
+}
+
+#logo-title {
+  font-family: "Lilita One", cursive;
+  font-size: 30px;
+}
+
+#contact {
+  font-family: "Montserrat", sans-serif;
+  transition: all 0.3s linear;
+}
+
+#contact:hover {
+  font-family: "Montserrat", sans-serif;
+
+  padding: 5px;
+  border-radius: 20px;
+
+  cursor: pointer;
+
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+  color: aliceblue;
+
+  transition: all 0.3s linear;
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+#ul_contact {
+  display: none;
+}
+
+/* CONTENT */
+.content {
+  display: flex;
+  justify-content: space-around;
+
+  align-items: center;
+
+  padding: 50px 10px 50px 50px;
+
+  border: 1px solid green;
+}
+
+.resume {
+  border: 1px solid red;
+}
+
+.resume h4 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+}
+
+.resume p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+}
+
+/* IPHONE */
+@media screen and (max-width: 900px) {
+  .header,
+  .header ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header ul {
+    gap: 20px;
+
+    padding: 10px 0px 20px 0;
+
+    text-align: center;
+  }
+
+  #logo-title,
+  #contact {
+    text-align: center;
+  }
+
+  #hamburger-menu,
+  #ul_contact {
+    display: block;
+  }
+
+  menu {
+    display: none;
+  }
+
+  #contact {
+    display: none;
+  }
+}
