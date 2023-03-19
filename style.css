@@ -128,25 +128,28 @@ hr {
 
 .resume p {
   font-family: "Roboto", sans-serif;
-  font-size: 20px;
-
-  padding: 0 0 10px 0;
+  font-size: 18px;
+  text-align: justify;
 
   color: black;
+  opacity: 80%;
 }
 
 #tecnologies {
   display: flex;
-  justify-content: space-around;
+  gap: 10px;
 
   list-style: none;
 }
-.resume ul li p {
-  padding: 5px 7px;
-  background-image: linear-gradient(to right, var(--tw-gradient-stops));
-  border-radius: 20px;
 
-  color: white;
+.resume ul li p {
+  padding: 0;
+  margin: 0;
+
+  font-size: 15px;
+
+  color: black;
+  opacity: 50%;
 }
 
 /* FOOTER */
@@ -154,9 +157,22 @@ footer {
 }
 
 /* IPHONE */
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 600px) {
   /* HEADER */
-  .header,
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
   .header ul {
     display: flex;
     flex-direction: column;
@@ -234,5 +250,114 @@ footer {
 
     font-size: 15px;
     color: white;
+  }
+}
+
+/* SAMSUNG */
+@media screen and (max-width: 500px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .header ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header ul {
+    gap: 20px;
+
+    padding: 10px 0px 20px 0;
+
+    text-align: center;
+  }
+
+  #logo-title,
+  #contact {
+    text-align: center;
+  }
+
+  #hamburger-menu,
+  #ul_contact {
+    display: block;
+  }
+
+  menu {
+    display: none;
+  }
+
+  #contact {
+    display: none;
+  }
+
+  /* CONTENT */
+
+  .content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .resume-container {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+
+    padding: 50px;
+  }
+
+  .resume h4 {
+    font-family: "Roboto", sans-serif;
+    font-size: 40px;
+
+    text-align: center;
+    color: black;
+  }
+
+  #office {
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    opacity: 70%;
+
+    text-align: center;
+    padding: 0 0 10px 0;
+  }
+
+  .resume p {
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+
+    text-align: center;
+    padding: 0 20px 20px;
+    color: black;
+  }
+  #tecnologies {
+    display: flex;
+    gap: 10px;
+
+    list-style: none;
+  }
+  .resume ul li p {
+    padding: 0;
+    margin: 0;
+
+    font-size: 15px;
+
+    color: black;
+    opacity: 50%;
+  }
+
+  .avatar img {
+    width: 350px;
+    height: 350px;
   }
 }
