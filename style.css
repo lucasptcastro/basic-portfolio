@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box; /* Faz com que os paddings, margin sejam aplicados na caixa do elemento */
+
+  font-size: 62.5%;
 }
 
 :root {
@@ -25,7 +27,7 @@ body {
 
   align-items: center;
 
-  padding: 15px 40px;
+  padding: 1.5rem 4rem;
 
   background: white;
 }
@@ -33,35 +35,45 @@ body {
 .header ul {
   display: flex;
   flex-direction: row;
-  gap: 30px;
+  gap: 3rem;
 
   justify-content: center;
 
   list-style: none;
 }
 
+#lnkInicio {
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+}
+
 .header ul li a {
   font-family: "Montserrat", sans-serif;
   text-decoration: line-through red;
 
+  font-size: 1.6rem;
   transition: all 0.3s linear;
 }
 
 .header ul li a:hover {
-  /* padding: 10px;
-  border-radius: 20px;
+  cursor: not-allowed;
+}
+
+#lnkInicio:hover {
+  padding: 1rem;
+  border-radius: 2rem;
 
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
   color: aliceblue;
 
-  transition: all 0.3s linear; */
+  transition: all 0.3s linear;
 
-  cursor: not-allowed;
+  cursor: pointer;
 }
 
 #logo-title {
   font-family: "Lilita One", cursive;
-  font-size: 30px;
+  font-size: 3rem;
 }
 
 #hamburger-menu {
@@ -76,7 +88,7 @@ hr {
 .content {
   background: #fbfaff;
 
-  padding: 100px 350px 80px;
+  padding: 10rem 35rem 8rem;
 }
 
 .resume-container {
@@ -92,7 +104,7 @@ hr {
 
 .resume h4 {
   font-family: "Roboto", sans-serif;
-  font-size: 50px;
+  font-size: 5rem;
 
   color: black;
 }
@@ -101,12 +113,12 @@ hr {
   font-family: "Roboto", sans-serif;
   opacity: 70%;
 
-  padding: 0 0 10px 0;
+  padding: 0 0 1rem 0;
 }
 
 .resume p {
   font-family: "Roboto", sans-serif;
-  font-size: 18px;
+  font-size: 1.8rem;
   text-align: justify;
 
   color: black;
@@ -115,7 +127,7 @@ hr {
 
 #tecnologies {
   display: flex;
-  gap: 10px;
+  gap: 1rem;
 
   list-style: none;
 }
@@ -124,19 +136,19 @@ hr {
   padding: 0;
   margin: 0;
 
-  font-size: 15px;
+  font-size: 1.5rem;
 
   color: black;
   opacity: 50%;
 }
 
 #btnContact {
-  margin: 20px 0;
+  margin: 2rem 0;
 }
 
 /* FOOTER */
 footer {
-  padding: 0 350px;
+  padding: 0 35rem;
 }
 
 /* SOCIAL MEDIAS */
@@ -146,7 +158,7 @@ footer {
 
 .social-medias ul {
   display: flex;
-  gap: 50px;
+  gap: 5rem;
 }
 
 .social-medias ul li {
@@ -163,13 +175,17 @@ footer {
   width: 9em;
   height: 3em;
   border-radius: 1em;
-  font-size: 15px;
+  font-size: 1.5rem;
   font-family: "Roboto", sans-serif;
   border: none;
   position: relative;
   overflow: hidden;
   z-index: 1;
   box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+}
+
+#btnContact a {
+  font-size: 1.4rem;
 }
 
 #btnContact:hover {
@@ -201,34 +217,25 @@ footer {
   color: black;
 }
 
-/* IPHONE */
-@media screen and (max-width: 600px) {
+.avatar img {
+  height: 60rem;
+  width: 60rem;
+}
+
+/* ===== SMARTPHONES ===== */
+@media screen and (min-width: 320px) and (max-width: 480px) {
   /* HEADER */
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    width: 100%;
-  }
-
   .header {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 2rem;
   }
 
-  .header ul {
+  .navbar {
+    width: 100%;
     display: flex;
-    flex-direction: column;
-  }
-
-  .header ul {
-    gap: 20px;
-
-    padding: 10px 0px 20px 0;
-
-    text-align: center;
+    justify-content: space-between;
+    align-items: center;
   }
 
   #logo-title {
@@ -243,6 +250,17 @@ footer {
     display: none;
   }
 
+  .header ul {
+    display: flex;
+    flex-direction: column;
+
+    gap: 2rem;
+
+    padding: 1rem 0 2rem 0;
+
+    text-align: center;
+  }
+
   /* CONTENT */
   .content {
     padding: 0;
@@ -253,11 +271,13 @@ footer {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
+
+    padding: 2rem 0 0 0;
   }
 
   .resume h4 {
     font-family: "Roboto", sans-serif;
-    font-size: 50px;
+    font-size: 4rem;
 
     text-align: center;
     color: black;
@@ -268,81 +288,69 @@ footer {
     opacity: 70%;
 
     text-align: center;
-    padding: 0 0 10px 0;
+    padding: 0 0 1rem 0;
   }
 
   .resume p {
     font-family: "Roboto", sans-serif;
-    font-size: 20px;
+    font-size: 1.8rem;
 
     text-align: center;
-    padding: 0 20px 20px;
+    padding: 0 2rem 1.3rem;
     color: black;
   }
 
-  #tecnologies {
+  .resume ul {
     display: flex;
-
-    list-style: none;
+    justify-content: center;
   }
 
   .resume ul li p {
-    margin: 0;
-    padding: 0;
-    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
 
-    font-size: 15px;
-    color: white;
+    padding: 0 0 3rem 0;
+
+    font-size: 1.2rem;
+    color: black;
   }
 
   #btnContact {
     margin: 0 auto;
   }
 
+  .avatar img {
+    height: 36rem;
+    width: 36rem;
+  }
+
   footer {
-    padding: 50px 0 10px;
+    display: flex;
+    justify-content: center;
+    padding: 5rem 0;
   }
 }
 
-/* ===== SAMSUNG ===== */
-@media screen and (max-width: 500px) {
+/* ===== TABLETS ===== */
+@media screen and (min-width: 481px) and (max-width: 768px) {
   .navbar {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: row;
 
     width: 100%;
   }
 
-  .header {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-
   .header ul {
     display: flex;
-    flex-direction: column;
-  }
-
-  .header ul {
-    gap: 20px;
-
-    padding: 10px 0px 20px 0;
-
-    text-align: center;
-  }
-
-  #logo-title {
-    text-align: center;
+    flex-direction: row;
   }
 
   #hamburger-menu {
-    display: block;
+    display: none;
   }
 
   menu {
-    display: none;
+    display: flex;
   }
 
   /* CONTENT */
@@ -351,7 +359,7 @@ footer {
     display: flex;
     flex-direction: column;
 
-    padding: 5px 0 0;
+    padding: 0;
   }
 
   .resume-container {
@@ -359,12 +367,20 @@ footer {
     flex-direction: column-reverse;
     align-items: center;
 
-    padding: 50px 50px 10px;
+    gap: 3rem;
+
+    padding: 2rem 5rem 1rem;
+  }
+
+  .resume {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
   }
 
   .resume h4 {
     font-family: "Roboto", sans-serif;
-    font-size: 40px;
+    font-size: 4rem;
 
     text-align: center;
     color: black;
@@ -372,50 +388,103 @@ footer {
 
   #office {
     font-family: "Roboto", sans-serif;
-    font-size: 20px;
+    font-size: 2rem;
     opacity: 70%;
 
     text-align: center;
-    padding: 0 0 10px 0;
+    padding: 0 0 1rem 0;
   }
 
   .resume p {
     font-family: "Roboto", sans-serif;
-    font-size: 15px;
+    font-size: 1rem;
 
     text-align: center;
-    padding: 0 20px 20px;
+    padding: 0 2rem 2rem;
     color: black;
   }
-  #tecnologies {
+
+  .resume ul {
     display: flex;
-    gap: 10px;
-
-    list-style: none;
+    justify-content: center;
   }
+
   .resume ul li p {
-    padding: 0;
-    margin: 0;
+    display: flex;
+    flex-direction: row;
 
-    font-size: 15px;
+    padding: 0 0 0.3rem 0;
 
+    font-size: 1.2rem;
     color: black;
-    opacity: 50%;
   }
 
   .avatar img {
-    width: 350px;
-    height: 350px;
+    width: 35rem;
+    height: 35rem;
   }
 
   #btnContact {
-    margin: 30px auto 0;
+    margin: 3rem auto 0;
   }
 
   footer {
     display: flex;
     justify-content: center;
 
-    margin: 0 0 10px;
+    margin: 3rem 0 1rem;
+  }
+}
+
+/* ===== IPADS ===== */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #hamburger-menu {
+    display: none;
+  }
+
+  menu {
+    display: block;
+  }
+
+  .content {
+    padding: 1rem 0;
+    margin: 0;
+  }
+
+  .resume-container {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .resume {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .resume h4 {
+    font-size: 3.8rem;
+  }
+
+  .resume ul {
+    padding: 1rem 0 0 0;
+  }
+
+  .avatar img {
+    height: 45rem;
+    width: 45rem;
+  }
+
+  footer {
+    display: flex;
+    justify-content: center;
+
+    padding: 0;
   }
 }
