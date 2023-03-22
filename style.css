@@ -40,6 +40,11 @@ body {
   list-style: none;
 }
 
+#lnkInicio {
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+}
+
 .header ul li a {
   font-family: "Montserrat", sans-serif;
   text-decoration: line-through red;
@@ -48,15 +53,19 @@ body {
 }
 
 .header ul li a:hover {
-  /* padding: 10px;
+  cursor: not-allowed;
+}
+
+#lnkInicio:hover {
+  padding: 10px;
   border-radius: 20px;
 
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
   color: aliceblue;
 
-  transition: all 0.3s linear; */
+  transition: all 0.3s linear;
 
-  cursor: not-allowed;
+  cursor: pointer;
 }
 
 #logo-title {
@@ -202,25 +211,19 @@ footer {
 }
 
 /* ===== SMARTPHONES ===== */
-@media screen and (max-width: 480px) {
-  body {
-    padding: 0;
-    margin: 0;
-  }
-
+@media screen and (min-width: 320px) and (max-width: 480px) {
   /* HEADER */
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    width: 100%;
-  }
-
   .header {
     display: flex;
     flex-direction: column;
     gap: 20px;
+  }
+
+  .navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .header ul {
@@ -258,11 +261,13 @@ footer {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
+
+    padding: 20px 0 0 0;
   }
 
   .resume h4 {
     font-family: "Roboto", sans-serif;
-    font-size: 50px;
+    font-size: 40px;
 
     text-align: center;
     color: black;
@@ -278,7 +283,7 @@ footer {
 
   .resume p {
     font-family: "Roboto", sans-serif;
-    font-size: 20px;
+    font-size: 18px;
 
     text-align: center;
     padding: 0 20px 20px;
@@ -304,58 +309,38 @@ footer {
     margin: 0 auto;
   }
 
-  footer {
-    padding: 0;
+  .avatar img {
+    height: 360px;
+    width: 360px;
   }
 
-  .social-medias {
+  footer {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-
-    padding: 0;
+    justify-content: center;
+    padding: 50px 0;
   }
 }
 
 /* ===== TABLETS ===== */
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 481px) and (max-width: 768px) {
   .navbar {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    flex-direction: row;
 
     width: 100%;
   }
 
-  .header {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-
   .header ul {
     display: flex;
-    flex-direction: column;
-  }
-
-  .header ul {
-    gap: 20px;
-
-    padding: 10px 0px 20px 0;
-
-    text-align: center;
-  }
-
-  #logo-title {
-    text-align: center;
+    flex-direction: row;
   }
 
   #hamburger-menu {
-    display: block;
+    display: none;
   }
 
   menu {
-    display: none;
+    display: flex;
   }
 
   /* CONTENT */
@@ -364,7 +349,7 @@ footer {
     display: flex;
     flex-direction: column;
 
-    padding: 10px 0 0;
+    padding: 0;
   }
 
   .resume-container {
@@ -374,7 +359,7 @@ footer {
 
     gap: 30px;
 
-    padding: 50px 50px 10px;
+    padding: 20px 50px 10px;
   }
 
   .resume {
@@ -441,18 +426,16 @@ footer {
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 769px) and (max-width: 1024px) {
   .header {
     display: flex;
     flex-direction: row;
-    width: auto;
 
     border: 1px solid red;
   }
 
   .content {
     display: flex;
-    width: fit-content;
 
     padding: 50px 300px;
     border: 1px solid yellow;
